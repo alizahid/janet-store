@@ -19,13 +19,13 @@ export default function Page({ product }) {
           <Rating count={product.rating.count} rating={product.rating.rate} />
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{product.title}</h1>
+            <h2 className="text-2xl font-bold">{product.title}</h2>
 
             <p>{product.description}</p>
 
-            <figure className="relative w-full h-96">
+            <figure className="relative w-full aspect-square lg:h-96 lg:w-96">
               <Image
                 className="object-contain"
                 src={product.image}

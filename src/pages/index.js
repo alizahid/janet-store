@@ -8,9 +8,7 @@ export default function Page({ products }) {
         <title>Store</title>
       </Head>
 
-      <h1 className="text-4xl font-bold">Store</h1>
-
-      <main className="grid grid-cols-2 gap-8 mt-16">
+      <main className="grid grid-cols-2 gap-8">
         {products.map((product) => (
           <Product product={product} key={product.id} />
         ))}
