@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Product } from "~/components/product";
 
-export default function Home({ products }) {
+export default function Page({ products }) {
   return (
     <div>
       <Head>
