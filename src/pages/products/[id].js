@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { AddToCart } from "~/components/add-to-cart";
 import { Rating } from "~/components/rating";
 import { formatPrice } from "~/lib/formatter";
 
@@ -19,7 +20,7 @@ export default function Page({ product }) {
           <Rating count={product.rating.count} rating={product.rating.rate} />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold">{product.title}</h2>
 
@@ -35,7 +36,13 @@ export default function Page({ product }) {
             </figure>
           </div>
 
-          <div className="font-bold text-4xl">{formatPrice(product.price)}</div>
+          <div className="flex flex-col gap-4">
+            <div className="font-bold text-4xl">
+              {formatPrice(product.price)}
+            </div>
+
+            <AddToCart productId={product.id} />
+          </div>
         </div>
       </main>
     </div>
