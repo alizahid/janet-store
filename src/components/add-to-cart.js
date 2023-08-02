@@ -1,9 +1,6 @@
-import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 
 export function AddToCart({ productId }) {
-  const router = useRouter();
-
   const [loading, setLoading] = useState(false);
 
   const addToCart = useCallback(async () => {
@@ -11,8 +8,8 @@ export function AddToCart({ productId }) {
 
     await fetch(`/api/add-to-cart?productId=${productId}`);
 
-    router.push("/cart");
-  }, [productId, router]);
+    setLoading(false);
+  }, [productId]);
 
   return (
     <button
