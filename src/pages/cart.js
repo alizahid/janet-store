@@ -14,6 +14,8 @@ export default function Page({ cart }) {
           <CartItem key={product.id} product={product} quantity={quantity} />
         ))}
       </main>
+
+      <pre>{JSON.stringify(cart, null, 2)}</pre>
     </>
   );
 }
