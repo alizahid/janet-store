@@ -3,17 +3,17 @@ import { Product } from "~/components/product";
 
 export default function Page({ products }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Store</title>
       </Head>
 
-      <main className="grid grid-cols-2 gap-8">
+      <main className="grid grid-cols-2 gap-8 flex-1">
         {products.map((product) => (
           <Product product={product} key={product.id} />
         ))}
       </main>
-    </div>
+    </>
   );
 }
 

@@ -6,12 +6,12 @@ import { formatPrice } from "~/lib/formatter";
 
 export default function Page({ product }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{product.title}</title>
       </Head>
 
-      <main className="flex flex-col gap-4">
+      <main className="flex flex-col gap-4 flex-1">
         <div className="flex gap-4 items-center">
           <div className="bg-emerald-600 text-sm font-medium rounded-lg px-2 py-1 text-white">
             {product.category}
@@ -45,7 +45,7 @@ export default function Page({ product }) {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }
 
